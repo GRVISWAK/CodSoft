@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css"> 
+        <script src="https://kit.fontawesome.com/83cbe61b05.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <img src="images/porfolio.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">Service</a></li>
+                    <li> <a href="#resume">Resume</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi,I'm <span>Viswak </span></h1>
+            </div>
+        </div>
+    </div>
+<!---------------------about------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/whiteshirtclg.jpg">
+
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About me</h1>
+                    <p class="abtmepara">
+                        Enthusiastic and motivated student with a Bachelor's degree in Information Technology
+                        . Eager to kickstart a rewarding career in Live IT feild where I can apply my academic knowledge, gain practical Live experience, and contribute positively to the team. Possessing a strong Live work ethic, excellent communication skills, and a passion for continuous learning, I am adaptable and open to new challenges.Through internships and academic projects, I have honed my problem-solving abilities and collaborative mindset. I am committed to delivering high-quality work and eager to contribute my skills.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tablinks" onclick="opentab('skills')">Skills</p>
+                        <!-- <p class="tablinks" onclick="opentab('experience')">Experience</p> -->
+                        <p class="tablinks active-link" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontents active-tab" id="skills">
+                        <ul>
+                            <li><span>C++</span></li>
+                            <li><span>Java</span></li>
+                            <li><span>HTML/CSS/Javascript</span></li>
+                            <li><span>React js</span></li>
+                            <li><span>Cloud Computing</span></li>
+                            <li><span>Dbms</span></li>
+                            <li><span>DSA</span></li>
+                            <li><span>Software Testing</span></li>
+                            <li><span>Problem solving:</span></li>
+                            <li><span><a class="leetcode" href="https://leetcode.com/G-R-VISWAK/">leetcode</a></span></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="tabcontents" id="experience">
+                        <ul>
+                            <li><span>React js</span></li>
+                            <li><span>Node js</span></li>
+                            <li><span>HTML/CSS/Javascript</span></li>
+                            <li><span>React js</span></li>
+                        </ul>
+                    </div> -->
+                    <div class="tabcontents" id="education">
+                        <ul>
+                            <li><span>Sri Krishna College of Engineering and Technology</span><br>
+                            CGPA: 7.74</li>
+                            <li><span>SSLC</span><br>
+                            Percentage: 90.8%</li>
+                            <li><span>HSC</span><br>
+                            Percentage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------services---------->
+<div id="services">
+<div class="container">
+    <h1 class="subtitle">My Services</h1>
+    <div class="serviceslist">
+        <div>
+            <h2>Full stack Developer</h2>
+            <img src="images/fullstackdev.jpg">
+            <p>I am a Full Stack Developer who is proficient in both front-end and back-end development, capable of handling all aspects of a web application. This includes designing the user interface (UI), developing server-side logic, managing databases, and ensuring seamless integration between the client and server</p>            <a href="#">Learn more</a>
+        </div>
+    </div>
+</div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/Screenshot 2024-07-17 165232.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>A calculator which allows people to do math operations more easily ,used for addition,substraction,multiplication and division</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Screenshot (77).png">
+                <div class="layer">
+                    <h3>Landing page</h3>
+                    <p>A landing page for a clothing brand which has a footer section and few other sections</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="resume">
+    <div class="container">
+    <h1 class="subtitle" >My resume</h1>
+    <div class="resdownload">
+        <p>View resume:
+    <a class="resumelink" href="https://drive.google.com/file/d/1D9nTBoPWywshHxdYSsdLAKXsdLiCjonW/view?usp=sharing"><i class="fa-solid fa-file-arrow-down"></i></a>    
+        </p>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <h1 class="subtitle">Contact</h1>
+        <div class="mycontact">
+                <p>ph no:+91 8668081881</p>
+                <p>E-mail: viswakgr@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="socialicons">
+        <a href="https://www.instagram.com/viswak_ramesh/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/viswak-g-r-06a623255/"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tablinks");
+        var tabcontents=document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            //document.getElementById(tabname).classList.remove("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu()
+        {
+            sidemenu.style.rigth="0";
+        }
+        function openmenu()
+        {
+            sidemenu.style.rigth="-200px";
+        }
+    </script>
+</body>
+</html>
